@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Positioning Examples</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .container {
+      margin-bottom: 30px;
+      padding: 10px;
+      border: 2px solid black;
+    }
+    .box {
+      border: 2px solid #007BFF;
+      padding: 10px;
+      margin: 5px;
+      background-color: #E8F7FF;
+      color: #0056b3;
+    }
+    .relative-box {
+      position: relative;
+      top: 10px;
+      left: 10px;
+    }
+    .absolute-box {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+    }
+    .fixed-box {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #FFC107;
+      border-color: #FFA000;
+    }
+    .sticky-box {
+      position: sticky;
+      top: 0;
+      background-color: #D4EDDA;
+      border-color: #28A745;
+    }
+    .static-box {
+      position: static;
+    }
+    .relative-container {
+      position: relative;
+      border: 2px dashed #6C757D;
+      padding: 50px;
+    }
+    .absolute-example {
+      position: relative; /* To show absolute positioned inside this container */
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Positioning Examples</h1>
+
+  <!-- Static -->
+  <div class="container">
+    <h2>Static Position</h2>
+    <p>The default positioning for any element.</p>
+    <div class="box static-box">I am a static box!</div>
+  </div>
+
+  <!-- Relative -->
+  <div class="container">
+    <h2>Relative Position</h2>
+    <p>The box is positioned relative to its normal position.</p>
+    <div class="box relative-box">I am a relative box!</div>
+  </div>
+
+  <!-- Absolute -->
+  <div class="container">
+    <h2>Absolute Position</h2>
+    <p>The box is positioned relative to the nearest positioned ancestor (or the viewport if none exist).</p>
+    <div class="absolute-example">
+      <div class="box absolute-box">I am an absolute box!</div>
+    </div>
+  </div>
+
+  <!-- Fixed -->
+  <div class="container">
+    <h2>Fixed Position</h2>
+    <p>The box is positioned relative to the viewport and does not move when scrolling.</p>
+    <div class="box fixed-box">I am a fixed box!</div>
+  </div>
+
+  <!-- Sticky -->
+  <div class="container">
+    <h2>Sticky Position</h2>
+    <p>The box is positioned relative until it crosses a defined threshold (e.g., `top: 0`).</p>
+    <div class="box sticky-box">I am a sticky box! Scroll to see my effect.</div>
+    <p>Keep scrolling to see how sticky positioning works when it reaches its threshold.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet...</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet...</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet...</p>
+  </div>
+</body>
+</html>
